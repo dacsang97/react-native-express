@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Router, IndexRoute, Route, browserHistory, applyRouterMiddleware } from 'react-router'
+import { Router, IndexRoute, Route, browserHistory, applyRouterMiddleware, hashHistory } from 'react-router'
 import useScroll from 'react-router-scroll/lib/useScroll'
 
 import * as Analytics from '../utils/Analytics'
@@ -26,7 +26,7 @@ export default class AppRouter extends Component {
   render() {
     return (
       <Router
-        history={browserHistory}
+        history={hashHistory}
         onUpdate={Analytics.pageView}
         render={applyRouterMiddleware(useScroll())}
       >

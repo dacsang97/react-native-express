@@ -4,7 +4,7 @@ import createStyles, { responsive } from 'react-styles-provider'
 
 import Sidebar from './Sidebar'
 import NavigatorButton from './NavigatorButton'
-import { HamburgerButton, Disqus } from '../components'
+import { HamburgerButton } from '../components'
 import { getSection, getNextSection, getPreviousSection } from '../utils/Sections'
 import * as config from '../config'
 
@@ -143,13 +143,6 @@ export default class App extends Component {
                 vertical={responsive.match('small') && responsive.match('mobile')}
                 nextSection={getNextSection(pathname)}
                 previousSection={getPreviousSection(pathname)}
-              />
-            </div>
-            <div style={styles.footer}>
-              <Disqus
-                title={title}
-                identifier={pathname}
-                url={window.location.href}
               />
             </div>
           </div>
