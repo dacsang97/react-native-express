@@ -74,28 +74,28 @@ const buttonStyle = {
 export default class extends Component {
   render() {
     const content = markdown(markdownOptions)`
-React Native is a framework for building cross-platform apps.
+React Native là một framework giúp xây dựng ứng dụng đa nền tảng.
 
-Building with React Native is extremely efficient and highly addictive - but getting started can be a little tricky. You should use this guide as a companion to the official Facebook documentation for [getting started](https://facebook.github.io/react-native/docs/getting-started.html). The Facebook guide assumes some existing knowledge about React development for the web. If you run into topics that aren't covered thoroughly, e.g. how Babel works, play with the examples in this guide to quickly get up to speed. This guide also covers related topics, such as Redux, which are beyond the scope of the React Native docs.
+Làm việc với React Native thì sướng khỏi nói, nhưng bước đầu làm quen có thể khiến bạn gặp khá nhiều trở ngại. Bạn nên đọc guide này song song với [docs chính thức](https://facebook.github.io/react-native/docs/getting-started.html) của Facebook. Docs của Facebook mặc định coi như bạn đã có kiến thức nền tảng về thư viện React trên web. Tuy nhiên guide của bọn mình sẽ cố gắng giải thích những khái niệm căn bản nhất, từ chính bản thân ngôn ngữ JavaScript đến những chủ đề mở rộng như Redux, GraphQL,... Trong quá trình học, bạn có thể nghịch code trực tiếp trên đây và kết quả sẽ được hiển thị theo thời gian thực.
 
-I hope you enjoy learning React Native. Reach out to me, [@devinaabbott](https://twitter.com/devinaabbott), with comments or questions you have along the way. Some pages are written by other authors (listed at top of each page), so feel free to contact them too.
+Bọn mình hy vọng guide sẽ dễ dàng giúp bạn làm quen với React Native - một công nghệ vô cùng mới và hot hiện nay. Bản gốc tiếng Anh được viết bởi [@devinaabbott](https://twitter.com/devinaabbott) cùng một số tác giả khác và được chuyển ngữ sang tiếng Việt bởi [VTeam](https://www.facebook.com/vteamglobal/). Bạn nên theo dõi fanpage và [blog](https://blog.vteam.info/) của bọn mình để nhận được những bài hướng dẫn nóng hổi nhất đến từ những thành viên tâm huyết của VTeam.
 
 # Hello World
 
-When you create a new React Native app, it will look like this:
+Một app React Native về cơ bản sẽ giống như thế này:
 
 <WebPlayer code={code} />
 
-You may notice the code doesn't look like the JavaScript you write currently. This is because it uses new language features (ES6 imports, classes, block-scoped variable declarations) and the JSX language extension.
+Bạn có thể thấy code JavaScript trong đây có gì đó khác khác so với JavaScript mà bạn từng được học. Đó là bởi vì chúng ta sẽ sử dụng những tính năng mới nhất của JavaScript (import, class, khai báo let/const, hàm async,...) và một ngôn ngữ mở rộng của JavaScript mang tên JSX.
 
-In the following sections, I'll give a brief background on each of these topics. If you're already familiar with each, skip to [Components](components) to learn more about React Components and the Component Lifecycle. If you're already familiar with React, skip to [Core Components](core_components).
+Trong phần tiếp theo, mình sẽ giới thiệu sơ lược về mỗi chủ đề trên. Nếu bạn biết rồi thì hãy nhảy đến chương [Components](components) để học về React Component và vòng đời của mỗi Component. Có thể bạn đã quen thuộc với React rồi thì hãy nhảy đến chương [Những Component cốt yếu của React Native](core_components).
 `
 
     return (
       <Page
         footer={this.props.footer}
         title={'React Native Express'}
-        subtitle={'Learn React Native, the cross-platform app framework'}
+        subtitle={'Học React Native, framework xây dựng ứng dụng đa nền tảng'}
         logo={'//cdn.rawgit.com/dabbott/react-native-express/master/static/logo'}
         logoWidth={256}
         logoHeight={296}
@@ -104,13 +104,13 @@ In the following sections, I'll give a brief background on each of these topics.
       >
         <GithubCorner />
         <PageHeader
-          title={'Learning React Native'}
-          author={'@devinaabbott'}
-          authorURL={'https://twitter.com/devinaabbott'}
+          title={'Cùng học React Native'}
+          author={'@nguyenlevulong'}
+          authorURL={'https://www.facebook.com/vu.long.355744'}
         />
         {content}
         <Link to={'modern_javascript'} style={buttonStyle}>
-          Let's get started!
+          Cùng bắt đầu nào!
         </Link>
       </Page>
     )
