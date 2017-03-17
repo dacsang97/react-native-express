@@ -38,7 +38,7 @@ export default class extends Component {
         )}
         {nextSection && (
           <Link to={nextSection.slug} style={styles.nextItem}>
-            Next - {nextSection.title}
+            Tiếp - {nextSection.title}
           </Link>
         )}
       </div>

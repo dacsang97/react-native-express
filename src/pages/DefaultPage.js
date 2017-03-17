@@ -5,7 +5,7 @@ import Page from './Page'
 
 export default class DefaultPage extends Component {
   render() {
-    const {title, footer, children} = this.props
+    const {title, footer, children, author, authorURL} = this.props
 
     return (
       <Page
@@ -14,8 +14,8 @@ export default class DefaultPage extends Component {
       >
         <PageHeader
           title={title}
-          author={'@devinaabbott'}
-          authorURL={'https://twitter.com/devinaabbott'}
+          author={`@${author}`}
+          authorURL={authorURL}
         />
         {children}
       </Page>
