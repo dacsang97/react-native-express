@@ -5,13 +5,19 @@ import markdownOptions from '../utils/MarkdownOptions'
 import DefaultPage from './DefaultPage'
 
 const content = markdown(markdownOptions)`
-ECMAScript is the language specification used to implement the JavaScript language. ES6, or ECMAScript 6, is the first significant update to the language since ES5 was initially released in 2009.
+ECMAScript là tiêu chuẩn ngôn ngữ được sử dụng cho JavaScript. ECMAScript 6, hay ES6, ra mắt năm 2015 nên đôi khi cũng được gọi là ES2015. ES6 là một bước nhảy lớn của JavaScript kể từ khi bản nâng cấp cuối cùng ES5 được ra mắt vào năm 2009.
 
-Many ES6 features are already available in modern JavaScript engines. Using Babel, however, gives us access to many more features, while ensuring our JavaScript runs on more platforms. React Native uses Babel to enable ES6 features and ensure cross-platform consistency, as your JavaScript will run on Android, iOS, Windows, and other platforms.
+Có khá nhiều tính năng mới của ES6 đã được hỗ trợ trên các bộ dịch JavaScript hiện đại. Tuy nhiên, Babel sẽ giúp chúng ta sử dụng được nhiều tính năng mới hơn nữa, và khiến code có thể chạy được trên nhiều nền tảng hơn. React Native dùng Babel để kích hoạt các tính năng của ES6 cũng như đảm bảo độ ổn định của code, vì code của chúng ta sẽ được chạy trên nhiều nền tảng khác nhau: Android, iOS, Windows,...
 
-# ES6 Highlights
+# Những tính năng nổi bật của ES6
 
-Let's take a look at some of the new language features we'll be using, and how they get compiled through Babel. There are a lot of language features to go through, so if you get tired, you can move on to [React Components](components), and finish up the language sections another time.
+Hãy cùng điểm qua một số tính năng mới của ES6 mà chúng ta sẽ sử dụng, cũng như cách mà Babel chuyển hóa chúng. Phần này khá dài và khô khan nếu nếu bạn cảm thấy chán thì có thể học về [React Components](components) trước rồi quay lại học ngôn ngữ sau cũng được.
 `
 
-export default props => <DefaultPage {...props}>{content}</DefaultPage>
+export default props => <DefaultPage 
+    {...props}
+    author='nguyenlevulong'
+    authorURL='https://www.facebook.com/vu.long.355744'
+>
+    {content}
+</DefaultPage>

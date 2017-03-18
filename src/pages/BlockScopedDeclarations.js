@@ -19,16 +19,22 @@ if (true) {
 }`
 
 const content = markdown(markdownOptions)`
-Instead of using \`var\` to declare local variables, we use \`const\` and \`let\`. The main difference is that \`var\` is scoped to a function, while \`const\` and \`let\` are scoped to a block.
+Thay vì dùng \`var\` để khai báo biến cục bộ, chúng ta sẽ sử dụng \`const\` và \`let\`. Sự khác biệt đó là \`var\` có phạm vi cục bộ trong toàn hàm, còn \`const\` và \`let\` có phạm vi cục bộ trong khối lệnh.
 
-Additionally, variables declared with \`const\` can only be assigned a value once. Assigning another value to the same name will throw a compiler error. Note that if the value assigned to a \`const\` variable is an object or array, the object or array may still be modified. In other words, it's only the variable name that is bound permanently -- the value itself is still mutable.
+Ngoài ra, biến khai báo với \`const\` chỉ có thể được gán giá trị một lần. Việc gán một giá trị khác vào tên biến đó sẽ gây ra lỗi. Chú ý rằng nếu giá trị được gán cho biến \`const\` là một object hoặc array thì object hoặc array đó vẫn có thể được chỉnh sửa. Nói cách khác, chỉ có tên biến là bị trói buộc lại, còn các phần tử trong nó vẫn có thể được thay đổi.
 
 <EditorTranspiler
   code=${code}
   title=${'Using const and let'}
 />
 
-You'll notice that the compiled output replaces \`const\` and \`let\` with \`var\`. You'll also notice that Babel transforms \`const a = 3\` into \`var _a = 3\`. This is so that your code can run on older platforms that don't support the new block-scoped variable declarations. It's the Babel compiler that enforces proper usage and block-scoping, rather than the runtime JavaScript engine.
+Ta thấy rằng code đầu ra đã thay thế \`const\` và \`let\` với \`var\`. Ngoài ra ta còn thấy Babel đã biến đổi \`const a = 3\` thành \`var _a = 3\`. Thật vậy, chính Babel là thứ ràng buộc phạm vi cục bộ của biến cũng như tính bất biến chứ không phải là trình chạy JavaScript.
 `
 
-export default props => <DefaultPage {...props}>{content}</DefaultPage>
+export default props => <DefaultPage 
+    {...props}
+    author='nguyenlevulong'
+    authorURL='https://www.facebook.com/vu.long.355744'
+>
+    {content}
+</DefaultPage>
